@@ -24,10 +24,6 @@ pyzmq==17.0.0
 qtconsole==4.3.1
 reportlab==3.3.0
 requests==2.9.1
-screen-resolution-extra==0.0.0
-simplegeneric==0.8.1
-static3==0.7.0
-system-service==0.3
 tabulate==0.8.1
 testpath==0.3.1
 textblob==0.15.1
