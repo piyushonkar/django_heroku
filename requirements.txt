@@ -17,7 +17,6 @@ pickleshare==0.7.4
 Pillow==5.1.0
 pipenv==2018.6.25
 polyglot==16.7.4
-pygtkspellcheck==3.0
 python-apt==1.1.0b1+ubuntu0.16.4.1
 pytz==2014.10
 pyudev==0.16.1
