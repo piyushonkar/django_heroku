@@ -1,0 +1,634 @@
+cardiologist,angina
+cardiologist,Aortic Stenosis
+cardiologist,Arrhythmias
+cardiologist,Atherosclerosis
+cardiologist,Atrial fibrillation
+cardiologist,atrial flutter
+cardiologist,Bradycardia
+cardiologist,Cardiomyopathy
+cardiologist,Congenital heart disease
+cardiologist,Coronary heart disease
+cardiologist,defibrillators
+cardiologist,Heart attacks
+cardiologist,Heart failure
+cardiologist,Heart Transplantation
+cardiologist,High blood cholesterol
+cardiologist,Hypertrophic cardiomyopathy
+cardiologist,Long QT syndrome
+cardiologist,Pacemakers
+cardiologist,Pericarditis
+cardiologist,Peripheral vascular disease
+cardiologist,Preventive cardiology
+cardiologist,Pulmonary hypertension
+cardiologist,restrictive cardiomyopathy
+cardiologist,Stable angina
+cardiologist,Supraventricular tachycardia
+cardiologist,syncope
+cardiologist,triglycerides
+cardiologist,vasovagal episodes
+dermatologist,alopecia
+dermatologist,lichen planus pigmentosus
+dermatologist,leucoderma
+dermatologist,Acne Rosasea
+dermatologist,Erythema Migrans
+dermatologist,Lice
+dermatologist,Scabies
+dermatologist,Angioma
+dermatologist,Dermatofibroma
+dermatologist,Moles
+dermatologist,Lipoma
+dermatologist,Milia
+dermatologist,Seborrheic Keratosis
+dermatologist,Skin Tag
+dermatologist,Spitz Nevus
+dermatologist,Bullous Pemphigoid
+dermatologist,Dermatitis Herpetiformis
+dermatologist,Pemphigus
+dermatologist,Pemphigoid
+dermatologist,Hyperpigmentation
+dermatologist,Hypopigmentation
+dermatologist,Allergic Contact Dermatitis
+dermatologist,Atopic Dermatitis
+dermatologist,seborrhea
+dermatologist,Dermatitis
+dermatologist,Dry Skin
+dermatologist,Irritant Contact Dermatitis
+dermatologist,Nummular Dermatitis
+dermatologist,Perioral Dermatitis
+dermatologist,Photosensitive Dermatitis
+dermatologist,Poison Ivy
+dermatologist,Poison Oak
+dermatologist,Poison Sumac
+dermatologist,Stasis Dermatitis
+dermatologist,eczema
+dermatologist,Alopecia Areata
+dermatologist,Cicatricial Alopecias
+dermatologist,Female Pattern Baldness
+dermatologist,Folliculitis
+dermatologist,Hidradenitis Suppuritiva
+dermatologist,Hirsutism
+dermatologist,Male Pattern Alopecia
+dermatologist,Telogen Effluvium
+dermatologist,Traction Alopecia
+dermatologist,Trichotillomania
+dermatologist,Athlete’s Foot
+dermatologist,Candida
+dermatologist,Cellulitis
+dermatologist,Condylomata Acuminata
+dermatologist,Herpes Simplex
+dermatologist,Herpes Zoster
+dermatologist,Impetigo
+dermatologist,Molluscum Contagiosum
+dermatologist,Shingles
+dermatologist,Tinea Versicolor
+dermatologist,Tinea Capitis
+dermatologist,Tinea Corporis
+dermatologist,Tinea Cruris
+dermatologist,Tinea Pedis
+dermatologist,Tinea Manuum
+dermatologist,Viral Exanthem
+dermatologist,Warts
+dermatologist,Herpes Zoster
+dermatologist,Hemangiomas
+dermatologist,Port Wine Stains
+dermatologist,Lichen Planus
+dermatologist,Pityriasis Rubra Pilaris
+dermatologist,Psoriasis
+dermatologist,Lentigos
+dermatologist,Melasma
+dermatologist,Actinic Keratosis
+dermatologist,Basal Cell Carcinoma
+dermatologist,Cutaneous T-Cell Lymphoma
+dermatologist,Melanoma
+dermatologist,Squamous Cell Carcinoma
+dermatologist,Connective Tissue Disease
+dermatologist,Dermatomyositis
+dermatologist,Discoid Lupus Erythematosus
+dermatologist,Morphea
+dermatologist,Scleroderma
+dermatologist,Subacute Cutaneous Lupus
+dermatologist,Erythema Multiforme
+dermatologist,Erythema Nodsum
+dermatologist,Erythroderma
+dermatologist,Granuloma Annulare
+dermatologist,Hemangiomas
+dermatologist,Hyperhidrosis
+dermatologist,Keloids
+dermatologist,Keratosis Pilaris
+dermatologist,Lichen Sclerosis et Atrophicus
+dermatologist,Lichen Simplex Chronicus
+dermatologist,Photodamage
+dermatologist,Pityriasis Rosea
+dermatologist,Spider Veins
+dermatologist,Staphylococcal Scalded Skin
+dermatologist,Stevens Johnson Syndrome
+dermatologist,Toxic Epidermal Necrolysis
+dermatologist,Urticaria
+dermatologist,Vasculitis
+diabetologist,diabetes insipidus
+diabetologist,diabetes
+diabetologist,diabetes mellitus
+diabetologist,gestational diabetes
+diabetologist,insulin-dependent diabetes
+diabetologist,type 1 diabetes
+diabetologist,type 2 diabetes
+endocrinologist,Acromegaly
+endocrinologist,Adrenal disorder
+endocrinologist,Adrenal Fatigue
+endocrinologist,Adrenal Incidentaloma
+endocrinologist,Adrenal Insufficiency
+endocrinologist,Bariatric Surgery
+endocrinologist,Congenital Adrenal Hyperplasia
+endocrinologist,Congenital Hypothyroidism
+endocrinologist,Cushing Syndrome
+endocrinologist,Cushings Disease
+endocrinologist,Goiter
+endocrinologist,Graves Disease
+endocrinologist,Hashimoto Disease
+endocrinologist,Hyperprolactinemia
+endocrinologist,Hyperthyroidism
+endocrinologist,Hypopituitarism
+endocrinologist,Hypothyroidism
+endocrinologist,Metabolic Syndrome
+endocrinologist,pancreatitis
+endocrinologist,Pituitary disorder
+endocrinologist,Pituitary Tumors
+endocrinologist,Primary Aldosteronism
+endocrinologist,Thyroid Disease
+endocrinologist,Thyroid disorder
+endocrinologist,Thyroid Nodules
+endocrinologist,Traumatic Brain Injury
+ent specialist,Adenoiditis
+ent specialist,Airway Stenosis
+ent specialist,Allergic Rhinitis
+ent specialist,Ankyloglossia
+ent specialist,Chronic Ear Disease
+ent specialist,Chronic Tonsillitis
+ent specialist,cleft lip
+ent specialist,Cleft Palate
+ent specialist,Cochlear Implants
+ent specialist,Complex Airway Diseases
+ent specialist,Comprehensive Head and Neck Surgery
+ent specialist,Down Syndrome
+ent specialist,Facial Paralysis
+ent specialist,Hearing (Tinnitus)
+ent specialist,Laryngomalacia
+ent specialist,Laryngopharygeal Reflux (LPR)
+ent specialist,Lymphatic Malformations
+ent specialist,Obstructive Sleep Apnea
+ent specialist,otitis media
+ent specialist,Robotic Surgery for Throat and Larnyx Cancer
+ent specialist,Salivary Disease
+ent specialist,Sialendoscopy
+ent specialist,Sinus Disease
+ent specialist,Skull-based Surgery
+ent specialist,Sleep Apnea
+ent specialist,Stridor
+ent specialist,Swallowing
+ent specialist,Thyroid Conditions
+ent specialist,Tongue Tie
+ent specialist,Tracheomalacia
+ent specialist,Transoral Laser Microsurgery (TLM)
+ent specialist,Transoral Robotic Surgery (TORS)
+ent specialist,Voice Disorders
+ent specialist,sinusitis
+gastroenterologist,Achalasia
+gastroenterologist,Acute Pancreatitis
+gastroenterologist,Alcoholic Liver Disease
+gastroenterologist,APC1307K
+gastroenterologist,Barrett’s Esophagus
+gastroenterologist,blue duct cancer
+gastroenterologist,Chronic Pancreatitis
+gastroenterologist,Collagenous and Lymphocytic Colitis
+gastroenterologist,Colon Polyps
+gastroenterologist,Crohn’s Disease
+gastroenterologist,Familial Adenomatous Polyposis
+gastroenterologist,Gallstone Disease
+gastroenterologist,Gastroesophageal Reflux Disease
+gastroenterologist,Gastroparesis
+gastroenterologist,Hepatocellular Carcinoma
+gastroenterologist,Hereditary Colorectal Cancer
+gastroenterologist,Hereditary Nonpolyposis Colorectal Cancer
+gastroenterologist,Irritable Bowel Syndrome
+gastroenterologist,Kids Familial Adenomatous Polyposis
+gastroenterologist,Liver Transplant Workup
+gastroenterologist,Peptic Ulcer Disease
+gastroenterologist,Portal Hypertension
+gastroenterologist,Sphincter of Oddi Dysfunction
+gastroenterologist,Sporadic Colorectal Cancer
+gastroenterologist,Stomach (Gastric) Cancer
+gastroenterologist,Swallowing Disorders
+gastroenterologist,Ulcerative Colitis
+gastroenterologist,Hepatitis
+gastroenterologist,Viral Hepatitis A & E
+gastroenterologist,Viral Hepatitis B
+gastroenterologist,Viral Hepatitis C
+general physician,jaundice
+general physician,typhoid
+general physician,diarrhoea
+general physician,diarrhea
+general physician,pyrexia
+general physician,malaria
+general physician,leptospirosis
+general physician,amoebiasis
+general physician,cholera
+general physician,chicken pox
+general physician,hookworm infection
+general physician,brucellosis
+general physician,influenza
+general physician,filariasis
+gynecologist,Abnormal bleeding
+gynecologist,Biopsy of the Vagina
+gynecologist,Biopsy of the Vulva
+gynecologist,breast exam
+gynecologist,Cervical Biopsy
+gynecologist,Cervical cerclage
+gynecologist,Chronic Pelvic Pain
+gynecologist,Cold knife cone
+gynecologist,Contraception options
+gynecologist,Cystectomy
+gynecologist,Cystocele
+gynecologist,Ectopic pregnancy
+gynecologist,Endometrial Ablations
+gynecologist,Endometriosis
+gynecologist,Fecal Incontinence/Accidental Bowel Leakage (ABL)
+gynecologist,Female sexuality issues
+gynecologist,Fibroids
+gynecologist,Fistulas
+gynecologist,Gynecology
+gynecologist,Hysteroscopy
+gynecologist,Infertility evaluation and treatment
+gynecologist,Irregular menstruation
+gynecologist,Laparoscopic oophorectomy
+gynecologist,Laparoscopic supracervical hysterectomy
+gynecologist,Laparoscopy
+gynecologist,late chums
+gynecologist,Lower genital tract dysplasia
+gynecologist,Menopause
+gynecologist,Miscarriage
+gynecologist,Myomectomy
+gynecologist,Ovarian cysts
+gynecologist,Pelvic floor dysfunction
+gynecologist,Pelvic heaviness or fullness
+gynecologist,Precancerous conditions of cervix and early cervical cancers
+gynecologist,Pregnancy and mental health
+gynecologist,Pregnancy and the flu
+gynecologist,Pregnancy care
+gynecologist,Premenstrual Syndrome (PMS)
+gynecologist,Rectocele
+gynecologist,Reproductive Surgeries
+gynecologist,Robotic Hysterectomy
+gynecologist,Supracervical total hysterectomy
+gynecologist,Tension-free vaginal taping/Vaginal vault suspension
+gynecologist,Uterine prolapse
+gynecologist,vaginal disorders
+gynecologist,Vaginal vault prolapse
+gynecologist,Vaginal yeast infections
+gynecologist,Vulvodynia
+gynecologist,Warts and premalignant lesions of the lower reproductive tract
+gynecologist,in vitri fertilisation
+nephrologist,Alports syndrome
+nephrologist,Chronic kidney disease
+nephrologist,Chronic renal failure
+nephrologist,renal failure
+nephrologist,Diabetic kidney disorder
+nephrologist,Diabetic nephropathy
+nephrologist,Electrolyte disorders
+nephrologist,Glomerular disease
+nephrologist,Glomerulonephritis
+nephrologist,Hematuria
+nephrologist,Hemolytic uremic syndrome
+nephrologist,Kidney failure
+nephrologist,Kidney stones
+nephrologist,Lupus nephritis
+nephrologist,Nephrotic syndrome
+nephrologist,Polycystic kidney disorder
+nephrologist,Proteinuria
+nephrologist,Pyelonephritis
+nephrologist,Renal cell carcinoma
+nephrologist,Renal insufficiency
+neurologist,Arteriovenous Malformation
+neurologist,brain abscesses
+neurologist,Brain Aneurysm
+neurologist,Brain Tumors
+neurologist,Dural Arteriovenous Fistulae
+neurologist,encephalitis
+neurologist,epilepsy
+neurologist,Huntington's disease
+neurologist,infections of the nervous system
+neurologist,Lou Gehrig’s disease
+neurologist,Memory Disorders
+neurologist,meningitis
+neurologist,migraine
+neurologist,multiple sclerosis
+neurologist,myasthenia gravis
+neurologist,neurodegenerative disorders
+neurologist,neuromuscular disorder
+neurologist,Parkinson's Disease
+neurologist,Peripheral Neuropathy
+neurologist,Post-Herpetic Neuralgia
+neurologist,seizure disorders
+neurologist,spina bifida
+neurologist,spinal cord disorders
+neurologist,Spinal Cord Tumor
+oncologist,Acute Lymphoblastic
+oncologist,Acute Lymphocytic
+oncologist,Acute Myeloid
+oncologist,Adenoid Cystic Carcinoma
+oncologist,Adrenal Gland Tumor
+oncologist,AML
+oncologist,Amyloidosis
+oncologist,Anal Cancer
+oncologist,Appendix Cancer
+oncologist,Astrocytoma
+oncologist,Ataxia Telangiectasia
+oncologist,B-cell Prolymphocytic Leukemia and Hairy Cell Leukemia
+oncologist,Beckwith-Wiedemann Syndrome
+oncologist,Bile Duct Cancer
+oncologist,Birt-Hogg-Dubé Syndrome
+oncologist,Bladder Cancer
+oncologist,Bone Cancer
+oncologist,Brain Stem Glioma
+oncologist,Brain Tumor
+oncologist,Breast Cancer
+oncologist,Carcinoid Tumor
+oncologist,Carney Complex
+oncologist,Central Nervous System Tumor
+oncologist,Cervical Cancer
+oncologist,Childhood Cancer
+oncologist,Cholangiocarcinoma
+oncologist,Chronic Lymphocytic
+oncologist,Chronic Myeloid
+oncologist,Chronic T-Cell Lymphocytic
+oncologist,CLL
+oncologist,CML
+oncologist,Colorectal Cancer
+oncologist,Cowden Syndrome
+oncologist,Craniopharyngioma
+oncologist,Desmoplastic Infantile Ganglioglioma
+oncologist,Diffuse Gastric Cancer
+oncologist,Eosinophilic
+oncologist,Ependymoma
+oncologist,Esophageal Cancer
+oncologist,Ewing Sarcoma
+oncologist,Eye Cancer
+oncologist,Eyelid Cancer
+oncologist,Familial GIST
+oncologist,Familial Malignant Melanoma
+oncologist,Familial Non-VHL
+oncologist,Familial Pancreatic Cancer
+oncologist,Gallbladder Cancer
+oncologist,Gastrointestinal Stromal Tumor
+oncologist,Germ Cell Tumor
+oncologist,Gestational Trophoblastic Disease
+oncologist,Head and Neck Cancer
+oncologist,HIV/AIDS Related Cancer
+oncologist,Hodgkin
+oncologist,Juvenile Polyposis Syndrome
+oncologist,Kaposi
+oncologist,Kidney Cancer
+oncologist,Lacrimal Gland Tumor
+oncologist,Laryngeal and Hypopharyngeal Cancer
+oncologist,Leiomyomatosis
+oncologist,Leukemia
+oncologist,Li-Fraumeni Syndrome
+oncologist,Liver Cancer
+oncologist,Lung Cancer
+oncologist,Lymphoma
+oncologist,Lynch Syndrome
+oncologist,Mastocytosis
+oncologist,MDS
+oncologist,Medulloblastoma
+oncologist,Melanoma
+oncologist,Meningioma
+oncologist,Mesothelioma
+oncologist,Mixed Polyposis Syndrome
+oncologist,Muir-Torre Syndrome
+oncologist,Multiple Endocrine Neoplasia Type 1
+oncologist,Multiple Endocrine Neoplasia Type 2
+oncologist,Multiple Myeloma
+oncologist,Myelodysplastic Syndromes
+oncologist,MYH-Associated Polyposis
+oncologist,Nasal Cavity and Paranasal Sinus Cancer
+oncologist,Nasopharyngeal Cancer
+oncologist,Neuroblastoma
+oncologist,Neuroendocrine Tumor
+oncologist,Neuroendocrine Tumor of the Pancreas
+oncologist,Neurofibromatosis Type 1
+oncologist,Neurofibromatosis Type 2
+oncologist,Nevoid Basal Cell Carcinoma Syndrome
+oncologist,Non-Hodgkin
+oncologist,Oral and Oropharyngeal Cancer
+oncologist,Osteosarcoma
+oncologist,Ovarian Cancer
+oncologist,Pancreatic Cancer
+oncologist,Papillary Renal Carcinoma
+oncologist,Parathyroid Cancer
+oncologist,Penile Cancer
+oncologist,Peritoneal Cancer
+oncologist,Peutz-Jeghers Syndrome
+oncologist,Pituitary Gland Tumor
+oncologist,Pleuropulmonary Blastoma
+oncologist,Prostate Cancer
+oncologist,Renal Cell Cancer
+oncologist,Retinoblastoma
+oncologist,Rhabdomyosarcoma
+oncologist,Salivary Gland Cancer
+oncologist,Sarcoma
+oncologist,Sarcomas of Specific Organs
+oncologist,Skin Cancer
+oncologist,Small Bowel Cancer
+oncologist,Stomach Cancer
+oncologist,Testicular Cancer
+oncologist,Thymic Carcinoma
+oncologist,Thymoma
+oncologist,Thyroid Cancer
+oncologist,Tuberous Sclerosis Complex
+oncologist,Unknown Primary
+oncologist,Uterine Cancer
+oncologist,Vaginal Cancer
+oncologist,Von Hippel-Lindau Syndrome
+oncologist,Vulvar Cancer
+oncologist,Waldenstrom’s Macroglobulinemia
+oncologist,Werner Syndrome
+oncologist,Wilms Tumor
+oncologist,Xeroderma Pigmentosum
+orthopedic,Adhesive capsulitis
+orthopedic,Arthritis
+orthopedic,baseball ebow
+orthopedic,bunion
+orthopedic,Bursitis
+orthopedic,Carpal Tunnel Syndrome
+orthopedic,Cervical disk degeneration
+orthopedic,compound fracture
+orthopedic,Cubital Tunnel Syndrome
+orthopedic,Fibromyalgia
+orthopedic,fracture
+orthopedic,golfer's elbow
+orthopedic,Greenstick
+orthopedic,hammertoes
+orthopedic,Herniated disk in the neck
+orthopedic,hip fracture
+orthopedic,Impingement syndrome
+orthopedic,Kyphosis
+orthopedic,Lateral Epicondylitis
+orthopedic,Ligament Injuries to the Knee
+orthopedic,Medial Epicondylitis
+orthopedic,Morton neuroma
+orthopedic,oblique fracture
+orthopedic,Osteoarthritis
+orthopedic,Osteoporosis
+orthopedic,Paget's Disease
+orthopedic,Rheumatoid Arthritis
+orthopedic,Scoliosis
+orthopedic,simple fracture
+orthopedic,Tendinosis
+orthopedic,Tendonitis
+orthopedic,Tennis elbow
+orthopedic,Torn Meniscus
+orthopedic,torn rotator cuff
+pediatrician,autism
+pediatrician,Candida albicans infection
+pediatrician,Candida parapsilosis infection
+pediatrician,Cytomegalovirus infection
+pediatrician,diphtheria
+pediatrician,Gonorrhea infection of the newborn
+pediatrician,Group B streptoccus infection
+pediatrician,human coronavirus infection
+pediatrician,measles
+pediatrician,meconium aspiration syndrome
+pediatrician,metapneumovirus (hMPV) infection
+pediatrician,Necrotizing enterocolitis
+pediatrician,parainfluenza (PIV) infection
+pediatrician,pertussis
+pediatrician,poliomyelitis
+pediatrician,prenatal Listeria
+pediatrician,respiratory distress syndrome
+pediatrician,respiratory Syncytial Virus infection
+pediatrician,rhinovirus
+pediatrician,tetanus
+pediatrician,Ureaplasma urealyticum infection
+psychiatrist,ADHD
+psychiatrist,alzheimer's
+psychiatrist,anxiety disorder
+psychiatrist,autism spectrum disorder
+psychiatrist,bipolar disorder
+psychiatrist,gambling disorder
+psychiatrist,Gender Dysphoria
+psychiatrist,Hoarding Disorder
+psychiatrist,Intellectual Disability
+psychiatrist,Obsessive-Compulsive Disorder
+psychiatrist,OCD
+psychiatrist,Personality Disorders
+psychiatrist,Postpartum Depression
+psychiatrist,Posttraumatic Stress Disorder
+psychiatrist,PTSD
+psychiatrist,Schizophrenia
+psychiatrist,Sleep Disorders
+psychiatrist,Somatic Symptom Disorder
+psychiatrist,Specific Learning Disorder
+psychiatrist,substance abuse
+psychiatrist,dementia
+pulmonologist,acute respiratory distress syndrome
+pulmonologist,Asbestosis
+pulmonologist,Asthma
+pulmonologist,Bronchitis
+pulmonologist,brown lung disease
+pulmonologist,Byssinosis
+pulmonologist,Chronic Cough
+pulmonologist,Chronic Obstructive Pulmonary Disease
+pulmonologist,Cystic Fibrosis
+pulmonologist,Emphysema
+pulmonologist,Farmer’s lung
+pulmonologist,Hemoptysis
+pulmonologist,Hypersensitivity pneumonitis
+pulmonologist,Interstitial Lung Disease
+pulmonologist,Interstitial lung disease
+pulmonologist,Lung Cancer
+pulmonologist,Nontuberculous Mycobacteria
+pulmonologist,Obstructive Sleep Apnea
+pulmonologist,Occupational Lung Disease
+pulmonologist,Occupational lung disease
+pulmonologist,Pleural Effusion
+pulmonologist,Pulmonary fibrosis
+pulmonologist,Rheumatoid lung disease
+pulmonologist,Sarcoidosis
+pulmonologist,Silicosis
+pulmonologist,Solitary Pulmonary Nodule
+pulmonologist,Tuberculosis
+pulmonologist,diastolic dysfunction
+sexologist,absent ejaculation
+sexologist,Bacterial Vaginosis
+sexologist,chancroid
+sexologist,Defective Ovulation
+sexologist,delayed ejaculation
+sexologist,Dhaat syndrome
+sexologist,Dyspareunia
+sexologist,erectile dysfunction
+sexologist,genital wart
+sexologist,gonorrohea
+sexologist,herpes
+sexologist,hiv
+sexologist,hydrocele
+sexologist,impotency
+sexologist,Inguinal Itching
+sexologist,Leucorrhoea
+sexologist,low libido
+sexologist,male infertility
+sexologist,Masturbation
+sexologist,Molluscum Contagiosum
+sexologist,night falls
+sexologist,premature ejaculation
+sexologist,retrograde ejaculation
+sexologist,sexually transmitted diseases
+sexologist,std
+sexologist,syphilis
+sexologist,Trichomoniasis
+sexologist,Unnatural sex
+sexologist,vaginismus
+sexologist,varicocele
+sexologist,chlamydia
+sexologist,hsv1 igg
+sexologist,phimosis
+urologist,kidney stone
+urologist,Prostatitis
+urologist,Interstitial cystitis
+urologist,Enlarged prostate
+urologist,Undescended testicles
+urologist,Hypospadias
+urologist,Bladder exstrophy
+urologist,Epispadias
+urologist,Azoospermia
+urologist,Bladder Control Problems
+urologist,Cystocele
+urologist,End-Stage Renal Disease
+urologist,Fecal Incontinence
+urologist,Hypospadias
+urologist,Kidney Transplant
+urologist,Hypogonadism
+urologist,Male Infertility
+urologist,Neurogenic Bladder
+urologist,Overactive bladder
+urologist,Pelvic Organ Prolapse
+urologist,Peyronie's Disease
+urologist,Post-Prostatectomy Incontinence
+urologist,Prostatitis
+urologist,Priapism
+urologist,Rectal Prolapse
+urologist,Recurrent Urinary Tract Infections
+urologist,Stress Urinary Incontinence
+urologist,Testicular Pain
+urologist,Testosterone Deficiency
+urologist,Upper Tract Tumor
+urologist,Ureteropelvic Junction Obstruction
+urologist,Urethral Cancer
+urologist,Urethral Diverticulum
+urologist,Urethral Stricture Disease
+urologist,Urinary Incontinence
+urologist,Urinary Tract Infection
+urologist,Microsurgical Varicocelectomy
+urologist,Varicocele
+urologist,Vasectomy Reversal
+urologist,Vesicoureteral Reflux
+urologist,Vesicovaginal Fistula
+urologist,Voiding Dysfunction

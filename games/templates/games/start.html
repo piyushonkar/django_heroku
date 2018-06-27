@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        Health Assistant- SmartMedics
+    </title>
+</head>
+<body>
+    <h2 style="text-align: center" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Your personal Doctor Consultation assistant</h2>
+    <br>
+    <hr>
+    <p style="text-align: center" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+        Please enter your details along with the problems you are facing.<br>
+        Try to be as descriptive as possible.<br>
+    </p>
+    <hr>
+    <br>
+    <br>
+    <form action= "/games/calculate/" method="post">
+		{% csrf_token %}
+        <fieldset>
+            <br>
+            <br>
+            <p style="text-align: center">
+				{{form}}
+            </p>
+            <div style="text-align: center">
+                <input type="submit" value="Submit" id="sub_button">
+            </div>
+            <br>
+            <br>
+        </fieldset>
+    </form>
+</body>
+</html>
