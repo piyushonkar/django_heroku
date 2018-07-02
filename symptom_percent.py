@@ -30,6 +30,7 @@ The packages imported are as follows:
 	nltk version 3.3
 	pandas version 0.23.0
 	autocorrect version 0.3.0
+	numpy version 1.14.5
 '''
 
 from nltk.corpus import stopwords
@@ -37,6 +38,7 @@ from nltk.tokenize import word_tokenize
 import pandas as pd
 from autocorrect import spell
 from textblob import TextBlob
+import numpy as np
 
 #################################################################
 
@@ -83,6 +85,7 @@ def computation(sentence):
 	disease_list=[]
 	psych_list=[]
 	short_disease_list=[]
+	dominant_list=np.empty([1,2],dtype=str)
 
 	####################################################################################################################
 
@@ -148,6 +151,20 @@ def computation(sentence):
 			short_disease_list.append(strip_list)
 			line=fp.readline()
 
+	lst=list(dominant_list)
+	with open('dominant.csv') as fp:
+		line = fp.readline()
+		while line:
+			stripped_line=line.strip()
+			stripped_line=stripped_line.lower()
+			strip_list=stripped_line.split(",")
+			a=strip_list[0].split(" ")
+			b=strip_list[1].split(" ")
+			keyword_list.extend(a)
+			keyword_list.extend(b)
+			lst.append([a,b])
+	dominant_list=np.asarray(lst)
+
 	keyword_list=list(set(keyword_list))	
 	sentence=correction(sentence,keyword_list)
 
@@ -182,7 +199,6 @@ def computation(sentence):
 	symptom_dict={}
 	dominant_key=''
 	psych_present=''
-	primary=['sex', 'cancer','abortion','penis','testes','testicles']
 	primary_indices={}
 	flag=0
 	disease=""
@@ -225,9 +241,10 @@ def computation(sentence):
 			quit()
 
 		elif flag==0:	
-			for m in primary:
-				if sentence.find(m)>=0:
-					primary_indices[m]=sentence.find(m)
+			for m in dominant_list:
+				for n in m:
+					if sentence.find(n)>=0:
+						primary_indices[n]=sentence.find(n)
 
 			min_key=''
 
@@ -266,7 +283,7 @@ def computation(sentence):
 							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
 							output_text=output_text.translate(to=lang)
 							return(output_text)
-							quit()
+						quit()
 					elif sentence.find('period')>=0 or sentence.find('abortion')>=0:
 						dominant_key='gynaecologist'
 						if lang=='en':
@@ -275,7 +292,7 @@ def computation(sentence):
 							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
 							output_text=output_text.translate(to=lang)
 							return(output_text)
-							quit()
+						quit()
 					else:
 						dominant_key='sexologist'
 						if lang=='en':
@@ -286,96 +303,29 @@ def computation(sentence):
 							return(output_text)
 						quit()
 
-			elif min_key=='penis':
-				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-					dominant_key='sexologist'
-					psych_present='psychiatrist'
-					if lang=='en':
-						return('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-						output_text=output_text.translate(to=lang)
-						return(output_text)	
-				else:
-					dominant_key='sexologist'
-					if lang=='en':
-						return('There is a high probability that you should consult a '+dominant_key)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
-						output_text=output_text.translate(to=lang)
-						return(output_text)
-				quit()
+			elif min_key != '':
+				for m in dominant_list:
+					for n in m:
+						if n.find(min_key)>=0:
+							specialist=dominant_list[m,1]
+							if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+								psych_present='psychiatrist'
+								if lang=='en':
+									return('You should consult a '+specialist+' and '+psych_present)
+								else:
+									output_text=TextBlob('You should consult a '+specialist+' and '+psych_present)
+									output_text=output_text.translate(to=lang)
+									return(output_text)
+								quit()
+							else:
+								if lang=='en':
+									return('You should consult a '+specialist)
+								else:
+									output_text=TextBlob('You should consult a '+specialist)
+									output_text=output_text.translate(to=lang)
+									return(output_text)
+								quit()
 
-			elif min_key=='testicles':
-				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-					dominant_key='sexologist'
-					psych_present='psychiatrist'
-					if lang=='en':
-						return('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-					else :
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-						output_text=output_text.translate(to=lang)
-						return(output_text)
-				else:
-					dominant_key='sexologist'
-					if lang=='en':
-						return('There is a high probability that you should consult a '+dominant_key)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
-						output_text=output_text.translate(to=lang)
-						return(output_text)
-				quit()
-						
-			elif min_key=='testes':
-				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-					dominant_key='sexologist'
-					psych_present='psychiatrist'
-					if lang=='en':
-						return('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-						output_text=output_text.translate(to=lang)
-						return(output_text)		
-				else:
-					dominant_key='sexologist'
-					if lang=='en':
-						return('There is a high probability that you should consult a '+dominant_key)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
-						output_text=output_text.translate(to=lang)
-						return(output_text)
-				quit()								
-				
-			elif min_key=='cancer':
-				dominant_key='oncologist'
-				if lang=='en':
-					return('There is a high probability that you should consult a '+ dominant_key)
-				else:
-					output_text=TextBlob('There is a high probability that you should consult a '+ dominant_key)
-					output_text=output_text.translate(to=lang)
-					return(output_text)
-				quit()
-
-			elif sentence.find('abortion')>=0 or sentence.find('period')>=0 :
-				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-					dominant_key='gynaecologist'
-					psych_present='psychiatrist'
-					if lang=='en':
-						return('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-						output_text=output_text.translate(to=lang)
-						return(output_text)
-				else:
-					dominant_key='gynaecologist'
-					if lang=='en':
-						return('There is a high probability that you should consult a '+dominant_key)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
-						output_text=output_text.translate(to=lang)
-						return(output_text)
-				quit()
-			
 			else:
 				for element in symptom_list:
 					if sentence.find(element[1]) >= 0 :
