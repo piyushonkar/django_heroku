@@ -25,8 +25,8 @@ SECRET_KEY = 'd)$15kpe*kyakr8h&^!=@@_&*yp7=yaj#uuv=b&%gz)0!z(6)#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['smartmedics.herokuapp.com']
-
+ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['smartmedics.herokuapp.com']
 
 # Application definition
 
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'Trial.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myproject',
+        'USER': 'piyush',
+        'PASSWORD': '123456789',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 

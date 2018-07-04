@@ -17,50 +17,58 @@
         <div class="flex-container">
             <div>
                 <h2><u>Add a symptom</u></h2>
-                <form style="font-size: medium">
+                <form style="font-size: medium" action="/add_deletion/add_symptom/" method="POST">
+                    {% csrf_token %}
                     <p>
-                        Enter a new symptom: <input type="text" name="symp" id="symp"><br>
-                        Enter the specialist: <input type="text" name="spl1" id="spl1"><br>
-                        Enter the weight (out of 5): <input type="number" name="wt" id="wt"><br>
+                         {{form_symptom}}<br>
                         <input type="submit" id="sub1" value="Add Symptom">
                     </p>
                 </form>
             </div>
             <div>
                 <h2><u>Add a disease</u></h2>
-                <form style="font-size: medium">
+                <form style="font-size: medium" method="POST" action="/add_deletion/add_disease/">
+                        {% csrf_token %}
                     <p>
-                        Enter a new disease: <input type="text" name="dis" id="dis"><br>
-                        Enter the specialist: <input type="text" name="spl2" id="spl2"><br>
+                        {{form_disease}}<br>
                         <input type="submit" id="sub2" value="Add Disease">
                     </p>
                 </form>
             </div>
             <div>
                 <h2><u>Add a new dominant keyword</u></h2>
-                <form style="font-size: medium">
+                <form style="font-size: medium" method="POST" action="/add_deletion/add_dominant/">
+                    {% csrf_token %}
                     <p>
-                        Enter a keyword: <input type="text" name="dominant" id="dom"><br>
+                        {{form_dominant}}<br>
                         <input type="submit" id="dominant" value="Add to database">
                     </p>
                 </form>
             </div>
         </div>
-        <div style="align-self: center">
+        <form style="align-self: center" method="POST" action="/add_deletion/view_symptom/">
+            {% csrf_token %}
             <p style="text-align: center">
                 <br>
                 <input type="submit" value="View the existing Symptoms" id="symp_sub"><br>
             </p>
+        </form>
+        <form style="align-self: center" method="POST" action="/add_deletion/view_disease/">
+            {% csrf_token %}
             <p style="text-align: center">
                 <br>
                 <input type="submit" value="View the existing Diseases" id="dis_sub"><br>
             </p>
+        </form>
+        <form style="align-self: center" method="POST" action="/add_deletion/delete_symptom/">
+            {% csrf_token %}
             <p style="color: white">
                 <br>
-                Enter a symptom/disease to delete from the database: <input type="text" name="delete" id="del"> &nbsp; <input type="submit" value="Delete" id="del_keyword">
+              {{form_sym_del}}<br>
+            <input type="submit" value="Delete" id="del_keyword">
             </p>
             <br>
-        </div>
+        </form>
     </div>
 </body>
 </html>
