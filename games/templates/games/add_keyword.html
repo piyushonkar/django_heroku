@@ -3,6 +3,34 @@
 <head>
     <style>
         h1 {color: white; font-family: monospace; text-align: center}
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: DodgerBlue;
+            justify-content: stretch;
+            height: 500;
+        }
+        
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 500px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+        }
+
+        .flex-2{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: dodgerblue;
+            flex-direction: column;
+        }
+
+        input[type=submit]{
+            width: 20em;
+            height: 2em;
+        }
     </style>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +44,7 @@
     <div class="flex-2">
         <div class="flex-container">
             <div>
-                <h2><u>Add a symptom</u></h2>
+                <h2 style="color: red"><u>Add a symptom</u></h2>
                 <form style="font-size: medium">
                     <p>
                         Enter a new symptom: <input type="text" name="symp" id="symp"><br>
@@ -27,7 +55,7 @@
                 </form>
             </div>
             <div>
-                <h2><u>Add a disease</u></h2>
+                <h2 style="color: red"><u>Add a disease</u></h2>
                 <form style="font-size: medium">
                     <p>
                         Enter a new disease: <input type="text" name="dis" id="dis"><br>
@@ -37,7 +65,7 @@
                 </form>
             </div>
             <div>
-                <h2><u>Add a new dominant keyword</u></h2>
+                <h2 style="color: red"><u>Add a new dominant keyword</u></h2>
                 <form style="font-size: medium">
                     <p>
                         Enter a keyword: <input type="text" name="dominant" id="dom"><br>
