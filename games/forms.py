@@ -14,7 +14,9 @@ class Disease_Addition(forms.Form):
 
 class Dominant_Addition(forms.Form):
     keyword=forms.CharField(label="Enter a keyword: ")
+    specialist=forms.CharField(label="Enter specialist for keyword")
 
 class Symptom_Deletion(forms.Form):
     sym_dis=forms.CharField(label="Enter a symptom/disease to delete from the database:")
 
+    

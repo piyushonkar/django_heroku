@@ -31,6 +31,10 @@
             width: 20em;
             height: 2em;
         }
+
+        form{
+            left: margin 5;
+        }
     </style>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,7 +50,7 @@
                 <form style="font-size: medium" action="/add_deletion/add_symptom/" method="POST">
                     {% csrf_token %}
                     <p>
-                         {{form_symptom}}<br>
+                         {{form_symptom.as_ul}}<br>
                         <input type="submit" id="sub1" value="Add Symptom">
                     </p>
                 </form>
@@ -56,7 +60,7 @@
                 <form style="font-size: medium" method="POST" action="/add_deletion/add_disease/">
                         {% csrf_token %}
                     <p>
-                        {{form_disease}}<br>
+                        {{form_disease.as_ul}}<br>
                         <input type="submit" id="sub2" value="Add Disease">
                     </p>
                 </form>
@@ -66,7 +70,7 @@
                 <form style="font-size: medium" method="POST" action="/add_deletion/add_dominant/">
                     {% csrf_token %}
                     <p>
-                        {{form_dominant}}<br>
+                        {{form_dominant.as_ul}}<br>
                         <input type="submit" id="dominant" value="Add to database">
                     </p>
                 </form>
@@ -89,11 +93,9 @@
         <form style="align-self: center" method="POST" action="/add_deletion/delete_symptom/">
             {% csrf_token %}
             <p style="color: white">
-                <br>
-              {{form_sym_del}}<br>
+              {{form_sym_del}}
             <input type="submit" value="Delete" id="del_keyword">
             </p>
-            <br>
         </form>
     </div>
 </body>

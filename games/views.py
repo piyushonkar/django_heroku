@@ -91,13 +91,13 @@ def add_dominant(request):
 
         if my_form.is_valid():
             dominant=my_form.cleaned_data['keyword']
+            specialist=my_form.cleaned_data['specialist']
 
     
     else:
         my_form=Dominant_Addition()
-    
     sentence="You have successfully updated dominant keywords."
-    updation_dominant(dominant)
+    updation_dominant(dominant,specialist)
     return render(request,'games/complete.html',{'text':sentence})
 
 def view_symptom(request):
@@ -227,4 +227,25 @@ def deletion(sym_dis):
 
         csvfile.close()
     
+    return None
+
+def updation_dominant(dominant,specialist):
+    list1=[]
+    with open('dominant.csv') as fp:  
+        line = fp.readline()
+        while line:
+            stripped_line=line.strip()
+            stripped_line = stripped_line.lower()
+            strip_list=stripped_line.split(",")
+            list1.append(strip_list)
+            line = fp.readline()
+        fp.close()
+
+    dominant=dominant.lower()
+    for element in list1:
+        if element[0]==dominant:
+            return None
+    fd=open('dominant.csv','a',newline="")
+    fd.write(dominant+","+specialist)
+    fd.close()
     return None
