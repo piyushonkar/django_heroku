@@ -75,11 +75,14 @@ WSGI_APPLICATION = 'Trial.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
-    }
-
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': 'smdeb',
+       'USER': '',
+       'PASSWORD': '',
+       'HOST': 'localhost',
+       'PORT': '',
+   }
 }
 
 
