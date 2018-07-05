@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'Trial.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'smdeb',
-       'USER': '',
-       'PASSWORD': '',
-       'HOST': 'localhost',
-       'PORT': '',
+       'NAME': 'ebdb',
+       'USER': 'postgres',
+       'PASSWORD': 'postgres',
+       'HOST': 'quickkmed-test.cfxftnn9jrm2.ap-southeast-1.rds.amazonaws.com',
+       'PORT': '5432',
    }
 }
 
