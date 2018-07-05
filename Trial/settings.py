@@ -25,7 +25,7 @@ SECRET_KEY = 'd)$15kpe*kyakr8h&^!=@@_&*yp7=yaj#uuv=b&%gz)0!z(6)#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['smartmedics.herokuapp.com']
 #ALLOWED_HOSTS = ['smartmedics.herokuapp.com']
 
 # Application definition
