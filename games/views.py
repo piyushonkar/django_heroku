@@ -81,7 +81,9 @@ def add_disease(request):
     
     else:
         my_form=Disease_Addition()
-    sentence="You have successfully updated disease."
+
+    a=Disease.objects.get(id=1)
+    sentence=a.disease +"-"+  a.specialist
     updation_disease(disease,specialist)
     return render(request,'games/complete.html',{'text':sentence})
 
