@@ -202,9 +202,9 @@ def computation(sentence):
 	######################################################################
 	if flag_short==1:
 		if lang=='en':
-			return('You should consult a ' + specialist + ' for ' + disease)
+			return('You should consult a ' + specialist)
 		else:
-			output_text=TextBlob("You should consult a" + specialist + "for" + disease)
+			output_text=TextBlob("You should consult a " + specialist)
 			output_text=output_text.translate(to=lang)
 			return(output_text)
 
@@ -217,9 +217,9 @@ def computation(sentence):
 				break
 		if flag==1:
 			if lang=='en':
-				return("You should consult a" + specialist + "for"+ disease)
+				return("You should consult a " + specialist)
 			else:
-				output_text=TextBlob("You should consult a" + specialist + "for"+ disease)
+				output_text=TextBlob("You should consult a " + specialist)
 				output_text=output_text.translate(to=lang)
 				return(output_text)
 			quit()
@@ -401,7 +401,7 @@ def computation(sentence):
 					if lang=='en':
 						return('Based on the analysis you should consult a '+' and '.join(print_list))
 					else:
-						output_text=TextBlob('Based on the symptoms you should consult a '+' and '.join(return_list))
+						output_text=TextBlob('Based on the symptoms you should consult a '+' and '.join(print_list))
 						output_text=output_text.translate(to=lang)
 						return(output_text)
 					quit()
