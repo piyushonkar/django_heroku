@@ -8,7 +8,7 @@ class Symptom(models.Model):
     weight=models.FloatField(max_length=100)
 
     def __str__(self):
-        return self.symptom +"-"+ self.specialist + "-" + self.weight
+        return self.symptom +"----"+ self.specialist + "----" + str(self.weight)
 
 
 class Disease(models.Model):
@@ -16,7 +16,7 @@ class Disease(models.Model):
     specialist=models.CharField(max_length=100)
 
     def __str__(self):
-        return self.disease + "-" + self.specialist
+        return self.disease + "----" + self.specialist
 
 
 class Keyword(models.Model):
@@ -24,5 +24,5 @@ class Keyword(models.Model):
     specialist=models.CharField(max_length=100)
 
     def __str__(self):
-        return self.keyword + "-" + self.specialist 
+        return self.keyword + "----" + self.specialist 
 

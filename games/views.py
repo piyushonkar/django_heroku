@@ -80,11 +80,9 @@ def add_disease(request):
             disease=my_form.cleaned_data['disease']
     
     else:
-        my_form=Diseases_Addition()
-
-    a=Disease.objects.get(id=1)
-    sentence=a.disease +"-"+  a.specialist
+        my_form=Disease_Addition()
     updation_disease(disease,specialist)
+    sentence="You have successfully added Disease."
     return render(request,'games/complete.html',{'text':sentence})
 
 def add_dominant(request):
@@ -104,19 +102,15 @@ def add_dominant(request):
 
 def view_symptom(request):
     if request.method=="POST":
-        data = pd.read_csv('example2.csv',header=None)
-        data.columns=["Specialist","Symptom","Weight"]
-        data_html = data.to_html()
-        context = {'text': data_html}
-        return render(request, "games/complete.html", context)
+        obj_symptoms=Symptom.objects.all()
+        context = {'text': obj_symptoms}
+        return render(request, "games/123.html", context)
     
 def view_disease(request):
     if request.method=="POST":
-        data = pd.read_csv('DiseasesData.csv',header=None)
-        data.columns=["Specialist","Disease"]
-        data_html = data.to_html()
-        context = {'text': data_html}
-        return render(request, "games/complete.html", context)
+        obj_diseases=Disease.objects.all()
+        context = {'text': obj_diseases}
+        return render(request, "games/123.html", context)
 
 def delete_symptom(request):
     if request.method=="POST":
@@ -134,120 +128,63 @@ def delete_symptom(request):
     
     
 def updation_symptom(symptom,specialist,weight):
-    list1=[]
-    with open('example2.csv') as fp:  
-        line = fp.readline()
-        while line:
-            stripped_line=line.strip()
-            stripped_line = stripped_line.lower()
-            strip_list=stripped_line.split(",")
-            list1.append(strip_list)
-            line = fp.readline()
-        fp.close()
+    list1=Symptom.objects.all()
 
     symptom=symptom.lower()
     specialist=specialist.lower()
     for element in list1:
-        if element[0]==specialist and element[1]==symptom:
+        if element.specialist.lower()==specialist and element.symptom.lower()==symptom:
             return None
-    fd=open('example2.csv','a',newline="")
-    fd.write(specialist+","+ symptom+ "," +str(weight))
-    fd.close()
+    obj_symptom=Symptom()
+    obj_symptom.specialist=specialist
+    obj_symptom.symptom=symptom
+    obj_symptom.weight=weight
+    obj_symptom.save()
     return None
 
 def updation_disease(disease,specialist):
-    list1=[]
-    with open('DiseasesData.csv') as fp:  
-        line = fp.readline()
-        while line:
-            stripped_line=line.strip()
-            stripped_line = stripped_line.lower()
-            strip_list=stripped_line.split(",")
-            list1.append(strip_list)
-            line = fp.readline()
-        fp.close()
+    list1=Disease.objects.all()
 
     disease=disease.lower()
     specialist=specialist.lower()
     for element in list1:
-        if element[0]==specialist and element[1]==disease:
+        if element.specialist.lower()==specialist and element.disease.lower()==disease:
             return None
-    fd=open('DiseasesData.csv','a',newline="")
-    fd.write(specialist+","+ disease)
-    fd.close()
+    obj_disease=Disease()
+    obj_disease.specialist=specialist
+    obj_disease.disease=disease
+    obj_disease.save()
     return None
 
 def deletion(sym_dis):
     list1=[]
-    with open('DiseasesData.csv') as fp:  
-        line = fp.readline()
-        while line:
-            stripped_line=line.strip()
-            stripped_line = stripped_line.lower()
-            strip_list=stripped_line.split(",")
-            list1.append(strip_list)
-            line = fp.readline()
-        fp.close()
-
-    list2=[]
-    sym_dis=sym_dis.lower()
+    list1=Disease.objects.all()
+    sym_dis = sym_dis.lower()
     for element in list1:
-        if element[1]!=sym_dis:
-            list2.append(element)
-    fd=open('DiseasesData.csv','w')
-    fd.close()
-
-    with open('DiseasesData.csv', 'a') as csvfile:
-        writer = csv.writer(csvfile)
-        for i in list2:
-            writer.writerow(i)
-
-        csvfile.close()
+        if element.specialist.lower()==sym_dis:
+            element.delete()
     
     list1=[]
-    with open('example2.csv') as fp:  
-        line = fp.readline()
-        while line:
-            stripped_line=line.strip()
-            stripped_line = stripped_line.lower()
-            strip_list=stripped_line.split(",")
-            list1.append(strip_list)
-            line = fp.readline()
-        fp.close()
-
-    list2=[]
+    list1=Symptom.objects.all()
     for element in list1:
-        if element[1]!=sym_dis:
-            list2.append(element)
-    fd=open('example2.csv','w')
-    fd.close()
-
-    with open('example2.csv', 'a') as csvfile:
-        writer = csv.writer(csvfile)
-        for i in list2:
-            writer.writerow(i)
-
-        csvfile.close()
+        if element.specialist.lower()==sym_dis:
+            element.delete()
     
     return None
+
 
 def updation_dominant(dominant,specialist):
     list1=[]
-    with open('dominant.csv') as fp:  
-        line = fp.readline()
-        while line:
-            stripped_line=line.strip()
-            stripped_line = stripped_line.lower()
-            strip_list=stripped_line.split(",")
-            list1.append(strip_list)
-            line = fp.readline()
-        fp.close()
+    list1=Keyword.objects.all()
 
     dominant=dominant.lower()
+    specialist=specialist.lower()
     for element in list1:
-        if element[0]==dominant:
+        if element.specialist.lower()==specialist and element.keyword.lower()==dominant:
             return None
-    fd=open('dominant.csv','a',newline="")
-    fd.write(dominant+","+specialist)
-    fd.close()
+    obj_dominant=Keyword()
+    obj_dominant.specialist=specialist
+    obj_dominant.keyword=dominant
+    obj_dominant.save()
     return None
+
