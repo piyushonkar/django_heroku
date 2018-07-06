@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'Trial.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'ebdb',
-       'USER': 'postgres',
-       'PASSWORD': 'postgres',
-       'HOST': 'quickkmed-test.cfxftnn9jrm2.ap-southeast-1.rds.amazonaws.com',
+       'NAME': 'd72nqfjphi2j19',
+       'USER': 'bouiaabhkuabeu',
+       'PASSWORD': '38323acb31cf2b1d481a33c83ab486629ee81c45d1040136603a4d9e64445069',
+       'HOST': 'ec2-54-197-253-122.compute-1.amazonaws.com',
        'PORT': '5432',
    }
 }
@@ -89,10 +89,10 @@ DATABASES = {
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'smdb',
+       'NAME': 'd72nqfjphi2j19', 
        'USER': 'root1',
        'PASSWORD': 'root1',
-       'HOST': 'localhost',
+       'HOST': 'ec2-54-197-253-122.compute-1.amazonaws.com',
        'PORT': '5432',
    }
 }
