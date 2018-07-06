@@ -80,7 +80,7 @@ def add_disease(request):
             disease=my_form.cleaned_data['disease']
     
     else:
-        my_form=Disease_Addition()
+        my_form=Diseases_Addition()
 
     a=Disease.objects.get(id=1)
     sentence=a.disease +"-"+  a.specialist
