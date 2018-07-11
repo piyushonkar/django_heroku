@@ -37,6 +37,7 @@ from nltk.tokenize import word_tokenize
 import pandas as pd
 from autocorrect import spell
 from textblob import TextBlob
+from .models import *
 
 #################################################################
 
@@ -77,7 +78,6 @@ def correction(sentence,List):
 def computation(sentence):
 	# To read the files and append the keywords, diseases and symptoms in the respective lists
 	sentence=sentence.lower()
-	filepath = 'example2.csv'
 	symptom_list=[]
 	keyword_list=[]
 	disease_list=[]
@@ -93,34 +93,24 @@ def computation(sentence):
 		sentence=text_input.translate(to='en')
 	sentence=str(sentence)
 
-	#############################################################################################################
+	############################################################################################################
+	
+	obj_symptom=Symptom.objects.all()
+	for element in obj_symptom:
+		specialist=element.specialist.lower()
+		symptom=element.symptom.lower()
+		keyword_list.append(specialist)
+		keyword_list.append(symptom)
+		weight=element.weight
+		symptom_list.append([specialist,symptom,weight])
 
-
-	with open(filepath) as fp:  
-		line = fp.readline()
-		while line:
-			stripped_line=line.strip()
-			stripped_line = stripped_line.lower()
-			strip_list=stripped_line.split(",")
-			a=strip_list[0].split(" ")
-			b=strip_list[1].split(" ")
-			keyword_list.extend(a)
-			keyword_list.extend(b)
-			symptom_list.append(strip_list)
-			line = fp.readline()
-
-	with open('DiseasesData.csv') as fp:
-		line = fp.readline()
-		while line:
-			stripped_line=line.strip()
-			stripped_line=stripped_line.lower()
-			strip_list=stripped_line.split(",")
-			a=strip_list[0].split(" ")
-			b=strip_list[1].split(" ")
-			keyword_list.extend(a)
-			keyword_list.extend(b)
-			disease_list.append(strip_list)
-			line=fp.readline()
+	obj_disease=Disease.objects.all()
+	for element in obj_disease:
+		specialist=element.specialist.lower()
+		disease=element.disease.lower()
+		keyword_list.append(disease)
+		keyword_list.append(specialist)
+		disease_list.append([specialist,disease])
 
 	with open('psychiatrist.csv') as fp:
 		line = fp.readline()
