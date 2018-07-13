@@ -95,19 +95,19 @@ def computation(sentence):
 
 	############################################################################################################
 	
-	obj_symptom=Symptom.objects.all()
+	obj_symptom=Chatbot.objects.filter(type__startswith='sym')
 	for element in obj_symptom:
 		specialist=element.specialist.lower()
-		symptom=element.symptom.lower()
+		symptom=element.word.lower()
 		keyword_list.append(specialist)
 		keyword_list.append(symptom)
 		weight=element.weight
 		symptom_list.append([specialist,symptom,weight])
 
-	obj_disease=Disease.objects.all()
+	obj_disease=Chatbot.objects.filter(type__startswith='dis')
 	for element in obj_disease:
 		specialist=element.specialist.lower()
-		disease=element.disease.lower()
+		disease=element.word.lower()
 		keyword_list.append(disease)
 		keyword_list.append(specialist)
 		disease_list.append([specialist,disease])

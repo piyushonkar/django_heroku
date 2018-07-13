@@ -102,13 +102,13 @@ def add_dominant(request):
 
 def view_symptom(request):
     if request.method=="POST":
-        obj_symptoms=Symptom.objects.all()
+        obj_symptoms=Chatbot.objects.filter(type__startswith='sym')
         context = {'text': obj_symptoms}
         return render(request, "games/123.html", context)
     
 def view_disease(request):
     if request.method=="POST":
-        obj_diseases=Disease.objects.all()
+        obj_diseases=Chatbot.objects.filter(type__startswith='dis')
         context = {'text': obj_diseases}
         return render(request, "games/123.html", context)
 
@@ -128,46 +128,48 @@ def delete_symptom(request):
     
     
 def updation_symptom(symptom,specialist,weight):
-    list1=Symptom.objects.all()
+    list1=Chatbot.objects.filter(type__startswith="sym")
 
     symptom=symptom.lower()
     specialist=specialist.lower()
     for element in list1:
-        if element.specialist.lower()==specialist and element.symptom.lower()==symptom:
+        if element.specialist.lower()==specialist and element.word.lower()==symptom:
             return None
-    obj_symptom=Symptom()
-    obj_symptom.specialist=specialist
+    obj_symptom=Chatbot()
+    obj_symptom.word=specialist
     obj_symptom.symptom=symptom
     obj_symptom.weight=weight
+    obj_symptom.type="symptom"
     obj_symptom.save()
     return None
 
 def updation_disease(disease,specialist):
-    list1=Disease.objects.all()
+    list1=Chatbot.objects.filter(type__startswith="dis")
 
     disease=disease.lower()
     specialist=specialist.lower()
     for element in list1:
-        if element.specialist.lower()==specialist and element.disease.lower()==disease:
+        if element.specialist.lower()==specialist and element.word.lower()==disease:
             return None
-    obj_disease=Disease()
+    obj_disease=Chatbot()
     obj_disease.specialist=specialist
-    obj_disease.disease=disease
+    obj_disease.word=disease
+    obj_disease.type="disease"
     obj_disease.save()
     return None
 
 def deletion(sym_dis):
     list1=[]
-    list1=Disease.objects.all()
+    list1=Chatbot.objects.filter(type__startswith='dis')
     sym_dis = sym_dis.lower()
     for element in list1:
-        if element.specialist.lower()==sym_dis:
+        if element.word.lower()==sym_dis:
             element.delete()
     
     list1=[]
-    list1=Symptom.objects.all()
+    list1=Chatbot.objects.filter(type__startswith='sym')
     for element in list1:
-        if element.specialist.lower()==sym_dis:
+        if element.word.lower()==sym_dis:
             element.delete()
     
     return None
@@ -175,16 +177,17 @@ def deletion(sym_dis):
 
 def updation_dominant(dominant,specialist):
     list1=[]
-    list1=Keyword.objects.all()
+    list1=Chatbot.objects.filter(type__startswith="dom")
 
     dominant=dominant.lower()
     specialist=specialist.lower()
     for element in list1:
-        if element.specialist.lower()==specialist and element.keyword.lower()==dominant:
+        if element.specialist.lower()==specialist and element.word.lower()==dominant:
             return None
-    obj_dominant=Keyword()
+    obj_dominant=Chatbot()
     obj_dominant.specialist=specialist
-    obj_dominant.keyword=dominant
+    obj_dominant.word=dominant
+    obj_dominant.type="dominant"
     obj_dominant.save()
     return None
 
