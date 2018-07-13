@@ -112,31 +112,17 @@ def computation(sentence):
 		keyword_list.append(specialist)
 		disease_list.append([specialist,disease])
 
-	with open('psychiatrist.csv') as fp:
-		line = fp.readline()
-		while line:
-			stripped_line=line.strip()
-			stripped_line=stripped_line.lower()
-			strip_list=stripped_line.split(",")
-			a=strip_list[0].split(" ")
-			b=strip_list[1].split(" ")
-			keyword_list.extend(a)
-			keyword_list.extend(b)
-			psych_list.append(strip_list)
-			line=fp.readline()
+	psych_list=[['psychiatrist', 'abnormal behavior', '3'], ['psychiatrist', 'adhd child', '4'], ['psychiatrist', 'adjustment problem', '5'], ['psychiatrist', 'aggressive', '4'], ['psychiatrist', 'angel tour', '3.5'], ['psychiatrist', 'anxiety', '3'], ['psychiatrist', 'big talks', '1.5'], ['psychiatrist', 'confusion', '1'], ['psychiatrist', 'craving', '4'], ['psychiatrist', 'craving for food','2.5'], ['psychiatrist', 'crawling sensation', '4'], ['psychiatrist', 'cry', '4.5'], ['psychiatrist', 'decrease in social skills', '2.5'], ['psychiatrist', 'delay in learning language skills', '3.5'], ['psychiatrist', 'depressed mood', '3'], ['psychiatrist', 'depression', '5'], ['psychiatrist', 'desire for food', '5'], ['psychiatrist', 'difficult to pay attention', '2.5'], ['psychiatrist', 'difficult to wake up from sleep', '5'], ['psychiatrist', 'difficulty in finding word', '5'], ['psychiatrist', 'difficulty in sleep', '4'], ['psychiatrist', 'disorder', '5'], ['psychiatrist', 'dizziness', '2'], ['psychiatrist', 'dizzy', '3'], ['psychiatrist', 'emotions', '3'], ['psychiatrist', 'fatigue', '3'], ['psychiatrist', 'fear', '1'], ['psychiatrist', 'fear of water', '1.5'], ['psychiatrist', 'fear of wind', '4.5'], ['psychiatrist', 'feeling of pressure or heaviness', '4.5'], ['psychiatrist', 'feeling walking on some skull', '5'], ['psychiatrist', 'fluctuations of mood', '1'], ['psychiatrist', 'frightening dreams', '4'], ['psychiatrist', 'frightening thoughts', '5'], ['psychiatrist', 'hallucination', '4.5'], ['psychiatrist', 'hyperactive', '5'], ['psychiatrist', 'hypertension', '4'], ['psychiatrist', 'inappropriate behavior', '4'], ['psychiatrist', 'intense desire for food', '4'], ['psychiatrist', 'lack of happiness', '1'],['psychiatrist', 'lack of self care', '5'], ['psychiatrist', 'lack of sense', '4.5'], ['psychiatrist', 'lack of sleep', '3.5'], ['psychiatrist', 'lack of social skills', '5'], ['psychiatrist', 'memory problem', '3.5'], ['psychiatrist', 'memory related problem', '4'], ['psychiatrist', 'mentally retarded ', '4'], ['psychiatrist', 'numb head', '5'], ['psychiatrist', 'numbness of head', '2'], ['psychiatrist', 'personality change', '2'], ['psychiatrist', 'perspiration', '5'], ['psychiatrist', 'phobia', '3.5'], ['psychiatrist', 'problem in learning language skills', '2.5'], ['psychiatrist', 'problem in waking up from sleep', '4'], ['psychiatrist', 'repeated thoughts of checking', '5'], ['psychiatrist', 'repeating same thing', '5'], ['psychiatrist', 'repeatingthe phrases', '4'], ['psychiatrist', 'repeating the words', '4'], ['psychiatrist', 'restless', '4'], ['psychiatrist', 'revolving sensation', '4'], ['psychiatrist', 'sadness', '3'], ['psychiatrist', 'scary dreams', '3.5'], ['psychiatrist', 'scary thoughts', '5'], ['psychiatrist', 'shak', '4.5'], ['psychiatrist', 'sleep disturbance', '3.5'], ['psychiatrist', 'spitting', '3.5'], ['psychiatrist', 'stress', '1'], ['psychiatrist', 'to cry', '4.5'], ['psychiatrist', 'unconscious', '3.5'], ['psychiatrist', 'unconsciousness', '1.5'], ['psychiatrist', 'unrest', '1.5'], ['psychiatrist', 'violent', '2.5'], ['psychiatrist', 'waham', '3.5'], ['psychiatrist', 'wander', '4']]
+	for qaz in psych_list:
+		keyword_list.append(qaz[0])
+		a=qaz[1].split(" ")
+		keyword_list.extend(a)
 
-	with open('short_diseases.csv') as fp:
-		line = fp.readline()
-		while line:
-			stripped_line=line.strip()
-			stripped_line=stripped_line.lower()
-			strip_list=stripped_line.split(",")
-			a=strip_list[0].split(" ")
-			b=strip_list[1].split(" ")
-			keyword_list.extend(a)
-			keyword_list.extend(b)
-			short_disease_list.append(strip_list)
-			line=fp.readline()
+	short_disease_list=[['gastroenterologist', 'gerd'], ['gastroenterologist', 'ibl'], ['gastroenterologist', 'sod'], ['neurologist', 'als'], ['oncologist', 'aml'], ['oncologist', 'cll'], ['oncologist', 'cml'], ['oncologist', 'gist'], ['oncologist', 'mds'], ['psychiatrist', 'adhd'], ['psychiatrist', 'ocd'], ['psychiatrist', 'ptsd'], ['pulmonologist', 'ards'], ['pulmonologist', 'copd'], ['pulmonologist','ild'], ['pulmonologist', 'tb'], ['sexologist', 'hiv'], ['sexologist', 'std'], ['urologist', 'ed'], ['hematologist', 'itp'], ['gynecologist', 'pcod'], ['gynecologist', 'pcos']]
+	for qaz in short_disease_list:
+		keyword_list.append(qaz[0])
+		keyword_list.append(qaz[0])
+
 
 	keyword_list=list(set(keyword_list))	
 	sentence=correction(sentence,keyword_list)
@@ -145,15 +131,8 @@ def computation(sentence):
 	###############################################################################################
 
 	# To read the file and append the male and female words in their lists accordingly
-	male=[]
-	female=[]
-	filename='MaleFemale.csv'
-	dataset=pd.read_csv(filename)
-	array=dataset.values
-	for i in array:
-		male.append(i[0])
-		female.append(i[1])
-
+	male=['boy', 'nephew', 'guy', 'male', 'husband', 'brother', 'he', 'son', 'papa', 'grandfather', 'grandad', 'father', 'uncle', 'uncle', 'Mr.', 'Mr.', 'gent', 'lad', 'master', 'sir', 'sir', 'bro', 'boyfriend']
+	female=['girl', 'niece', 'gal', 'female', 'wife', 'sister', 'she', 'daughter', 'maa', 'grandmother', 'grandmom', 'mother', 'aunt', 'aunty', 'Mrs.', 'Miss.', 'lady', 'lass', 'miss', "ma'am", 'madam', 'sis', 'girlfriend']
 	gender=''
 	for sex in word_tokenize(sentence):
 		if sex in male:
